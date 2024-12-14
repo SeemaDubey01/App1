@@ -1,0 +1,19 @@
+
+_
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄÞ8¼À¬¦¼2
+X	java:S125K"<This block of commented-out lines of code should be removed.(ùŽßÃ8ÄÀ¬¦¼2
+j
+java:S1128
+"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñýÓ“8ÄÀ¬¦¼2
+l
+java:S1128"ORemove this unused import 'org.springframework.security.core.GrantedAuthority'.(½Á±ÿ8ÅÀ¬¦¼2
+x
+java:S1128"VRemove this unused import 'org.springframework.security.core.context.SecurityContext'.(ØýÞþÿÿÿÿ8ÅÀ¬¦¼2
+y
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8ÅÀ¬¦¼2
+“
+java:S1128"qRemove this unused import 'org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper'.(¼ ¼‘ûÿÿÿÿ8ÅÀ¬¦¼2
+v
+java:S1128"TRemove this unused import 'org.springframework.web.client.HttpClientErrorException'.(ð»òøÿÿÿÿ8ÅÀ¬¦¼2
+„
+java:S1128"gRemove this unused import 'org.springframework.web.reactive.function.client.WebClientRequestException'.(µÚå˜8ÅÀ¬¦¼2
