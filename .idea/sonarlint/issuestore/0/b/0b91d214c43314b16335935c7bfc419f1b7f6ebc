@@ -1,19 +1,0 @@
-
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡‰íï¹2
-]	java:S125"<This block of commented-out lines of code should be removed.(ÅîÔ±ûÿÿÿÿ8¾Õ•º2
-e
-java:S1128"HRemove this unused import 'org.example.repositories.EmployeeRepository'.(şÙêğ8³âº2
-d
-java:S1128"GRemove this unused import 'org.example.repositories.ProjectRepository'.(ü®¹ä8³âº2
-b
-java:S1128"ERemove this unused import 'org.example.repositories.entity.Employee'.(ïî–ü8³âº2
-w
-java:S1128
-"URemove this unused import 'org.springframework.transaction.annotation.Transactional'.(ğùçøùÿÿÿÿ8´âº2
-^
-java:S1128"<Remove this unused import 'javax.persistence.EntityManager'.(ğàËÒıÿÿÿÿ8´âº2
-c
-java:S1128"ARemove this unused import 'javax.persistence.PersistenceContext'.(ê°İÒıÿÿÿÿ8´âº2
-Q
-java:S1128"4Remove this unused import 'javax.persistence.Query'.(¢ğö8´âº2

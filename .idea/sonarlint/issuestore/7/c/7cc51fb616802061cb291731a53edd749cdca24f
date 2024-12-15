@@ -1,8 +1,0 @@
-
-X
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
-V	java:S125"<This block of commented-out lines of code should be removed.(ÅîÔ±ûÿÿÿÿ
-f
-java:S1128"DRemove this unused import 'org.example.repositories.RoleRepository'.(£ü¡„ùÿÿÿÿ8¥ÓêŽº2
-c
-java:S1128"ARemove this unused import 'org.example.repositories.entity.Role'.(ª‰ÓÕûÿÿÿÿ8¥ÓêŽº2

@@ -1,10 +1,0 @@
-
-_
-java:S2094	"BRemove this empty class, write its code or make it an "interface".(ïÚƒ8‡Ö«¼2
-]	java:S125"<This block of commented-out lines of code should be removed.(®ÓÔ‹ûÿÿÿÿ8®òÏ«¼2
-e
-java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8®òÏ«¼2
-s
-java:S1128"QRemove this unused import 'org.springframework.context.annotation.Configuration'.(¬²Úäşÿÿÿÿ8ŠÖ«¼2
-u
-java:S1128"XRemove this unused import 'springfox.documentation.swagger2.annotations.EnableSwagger2'.(ùÔ¨8ŠÖ«¼2
