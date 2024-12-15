@@ -7,11 +7,7 @@ import org.example.exception.ResourceNotFoundException;
 import org.example.service.EmployeeApiClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.reactive.function.client.WebClientRequestException;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
 @RestController
@@ -43,20 +37,29 @@ public class EmployeeController {
         try {
             return ResponseEntity.ok(employeeService.getEmployeeById(id));
         }catch(WebClientResponseException.NotFound e){
-             throw new ResourceNotFoundException("Employee not found for the id"+id);
+             throw new ResourceNotFoundException("Employee not found for the id "+id);
         }
         }
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDTO) {
-        return ResponseEntity.ok(employeeService.updateEmployee(id, employeeDTO));
+    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDTO employeeDTO,@RequestHeader("Role") String role) {
+        validateRole(role);
+        try {
+            return ResponseEntity.ok(employeeService.updateEmployee(id, employeeDTO, role));
+        }catch(WebClientResponseException.NotFound e){
+            throw new ResourceNotFoundException("Employee not found for the id "+id);
+        }
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
-        employeeService.deleteEmployee(id);
-        return ResponseEntity.ok("Employee deleted successfully");
+        try {
+            employeeService.deleteEmployee(id);
+            return ResponseEntity.ok("Employee deleted successfully");
+        }catch(WebClientResponseException.NotFound e){
+            throw new ResourceNotFoundException("Employee not found for the id "+id);
+        }
     }
 
     private void validateRole(String role) {
@@ -71,23 +74,5 @@ public class EmployeeController {
           throw new BadRequestException("Invalid role");
         }
     }
-    ///// MD
-//    private void checkRole(){
-//        SecurityContext context = SecurityContextHolder.getContext();
-//        SecurityContextHolder.getContext().getAuthentication().getPrincipal()
-//        if (context == null)
-//            System.out.print("MD: context is null");
-//        System.out.println("MD: context - " + context);
-//        Authentication authentication = context.getAuthentication();
-//        if (authentication == null)
-//            System.out.println("MD: not authenticated");
-//
-//        for (GrantedAuthority auth : authentication.getAuthorities()) {
-//            auth.au
-//
-//            System.out.println("MD: athority: " + auth);
-//        }
-//
-//        authentication.aut
-//    }
+
 }

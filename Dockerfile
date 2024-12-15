@@ -1,11 +1,11 @@
 # Use official OpenJDK as base image
-FROM openjdk:17-jdk-slim
+FROM openjdk:17
 
 # Set working directory
 WORKDIR /app
 
 # Copy project files
-COPY target/app1.jar app1.jar
+COPY target/App1-1.0.jar App1-1.0.jar
 
 # Expose port
 EXPOSE 9000

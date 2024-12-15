@@ -7,10 +7,12 @@ public enum Roles {
 
     private final long id;
 
-    // Constructor to set the ID for each role
-    Roles(int id) {
+    Roles(long id) {
         this.id = id;
     }
+
+    // Constructor to set the ID for each role
+
 
 
     // Getter method for the ID

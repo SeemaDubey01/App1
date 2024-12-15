@@ -1,25 +1,29 @@
-package org.example.dto;
+package org.example.domainObjects;
 
 
-public class EmployeeDTO {
-    String firstName;
+public class ServiceEmployeeDTO {
 
-String surname;
+String name;
+long roleId;
 
-    public String getFirstName() {
-        return firstName;
+    public ServiceEmployeeDTO(String name, long roleId) {
+        this.name = name;
+        this.roleId = roleId;
+    }
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public long getRoleId() {
+        return roleId;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setRoleId(long roleId) {
+        this.roleId = roleId;
     }
-
 }

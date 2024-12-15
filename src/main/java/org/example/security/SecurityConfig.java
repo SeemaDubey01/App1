@@ -14,10 +14,8 @@ import org.springframework.security.config.core.GrantedAuthorityDefaults;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String [] SWAGGER_WHITELIST = {
-            "/swagger-ui/**",
-            "/v3/api-docs/**",
-            "/swagger-resources/**",
-            "/swagger-resources"
+            "/swagger-ui.html",
+            "/v3/api-docs"
     };
 
     @Override
